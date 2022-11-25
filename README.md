@@ -1,6 +1,14 @@
 # MicrowaveLocalOscillator
 
-Shield: [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
+[![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
+
+## Description
+
+A simple 2 stage microwave local oscillator using an ADF 4513 to control a Crystek (or similar) VCO
+
+A OCXO reference oscillator is optionally controlled by an ADF4001 when a 10MHz reference signal is present.
+
+## License 
 
 This work is licensed under a
 [Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].

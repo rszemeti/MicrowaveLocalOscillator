@@ -3201,7 +3201,7 @@ design rules under a new name.</description>
 </autorouter>
 <elements>
 <element name="C22" library="rcl" package="C0805" value="100nF" x="85.571778125" y="15.481146875" smashed="yes" rot="R270">
-<attribute name="NAME" x="83.592159375" y="13.585365625" size="1.27" layer="25" rot="R270"/>
+<attribute name="NAME" x="83.007959375" y="15.566565625" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="83.031778125" y="16.751146875" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="C24" library="rcl" package="C0603" value="100nF" x="43.47164375" y="42.96926875" smashed="yes" rot="R180">
@@ -3526,7 +3526,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="39.946" y="33.323" size="1.27" layer="27" align="center"/>
 </element>
 <element name="R8" library="rcl" package="R0603" value="51R" x="10.248" y="16.257" smashed="yes" rot="R180">
-<attribute name="NAME" x="12.117" y="15.67" size="1.27" layer="25"/>
+<attribute name="NAME" x="9.1706" y="17.2702" size="1.27" layer="25"/>
 <attribute name="VALUE" x="10.883" y="18.162" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="LED2" library="led" package="LED3MM" value="EXT LOCK" x="7.184" y="19.527" smashed="yes" rot="R90">
@@ -3543,7 +3543,7 @@ design rules under a new name.</description>
 <attribute name="MOUSER_TESTING_PART_NUMBER" value="" x="14.074" y="12.447" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MANUFACTURER_PART_NUMBER" value="74LVC2G17GV,125" x="14.074" y="12.447" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MOUSER_TESTING_PRICE-STOCK" value="" x="14.074" y="12.447" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="14.074" y="15.241" size="1.27" layer="25" rot="R180" align="center"/>
+<attribute name="NAME" x="13.1342" y="15.1648" size="1.27" layer="25" rot="R180" align="center"/>
 <attribute name="VALUE" x="14.074" y="12.447" size="1.27" layer="27" rot="R180" align="center"/>
 </element>
 <element name="R9" library="rcl" package="R0603" value="51R" x="10.248" y="10.161" smashed="yes" rot="R180">
@@ -3579,15 +3579,15 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="15.199" y="40.538" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="C6" library="resistor" package="C0603" value="390p" x="22.184" y="39.903" smashed="yes" rot="R270">
-<attribute name="NAME" x="21.676" y="37.49" size="1.27" layer="25" rot="R270"/>
+<attribute name="NAME" x="21.6506" y="37.1852" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="20.152" y="40.792" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="C7" library="resistor" package="C0603" value="2.7nF" x="19.644" y="39.903" smashed="yes" rot="R270">
-<attribute name="NAME" x="18.882" y="37.744" size="1.27" layer="25" rot="R270"/>
+<attribute name="NAME" x="18.8566" y="37.49" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="17.612" y="40.792" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="L2" library="resistor" package="R0603" value="82nH" x="24.724" y="39.903" smashed="yes" rot="R90">
-<attribute name="NAME" x="25.105" y="34.95" size="1.27" layer="25" rot="R90"/>
+<attribute name="NAME" x="25.1558" y="35.1024" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="26.756" y="39.014" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="SCK1" library="con-coax" package="J502-ND-142-0701-871/876" value="SMA-142-0701-871/876" x="0.254" y="42.363">
@@ -3611,7 +3611,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="21.295" y="41.681" size="1.27" layer="27"/>
 </element>
 <element name="R4" library="rcl" package="R0603" value="51R" x="27.264" y="39.903" smashed="yes" rot="R90">
-<attribute name="NAME" x="27.899" y="35.204" size="1.27" layer="25" rot="R90"/>
+<attribute name="NAME" x="27.7466" y="35.458" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="29.169" y="39.268" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="C1" library="resistor" package="C0603" value="3.9pF" x="22.184" y="44.983" smashed="yes">
@@ -3622,7 +3622,10 @@ design rules under a new name.</description>
 <attribute name="NAME" x="27.645" y="42.57" size="1.27" layer="25" rot="R180"/>
 <attribute name="VALUE" x="26.629" y="45.618" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="OSC1" library="RF" package="CTI_OSC" value="CTI_OSC" x="51.14" y="15.265" rot="R90"/>
+<element name="OSC1" library="RF" package="CTI_OSC" value="CTI_OSC" x="51.14" y="15.265" smashed="yes" rot="R90">
+<attribute name="NAME" x="49.17" y="12.565" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="37.17" y="15.265" size="1.27" layer="27" rot="R90"/>
+</element>
 <element name="SV1" library="con-harting-ml" package="ML6" value="" x="78.52" y="45.551" smashed="yes">
 <attribute name="OC_NEWARK" value="unknown" x="78.52" y="45.551" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="78.52" y="45.551" size="1.778" layer="27" display="off"/>
@@ -3632,7 +3635,7 @@ design rules under a new name.</description>
 </element>
 <element name="SJ1" library="jumper" package="SJ" value="" x="74.448" y="36.041" rot="R180"/>
 <element name="IC6" library="linear" package="TO252" value="7805DT" x="31.136" y="7.947" smashed="yes" rot="R180">
-<attribute name="NAME" x="33.215" y="0.668" size="1.27" layer="25" rot="R180"/>
+<attribute name="NAME" x="32.215" y="14.668" size="1.27" layer="25" rot="R180"/>
 <attribute name="VALUE" x="26.056" y="10.487" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="IC5" library="ATTINY45V-10SU" package="SOIC127P798X216-8N" value="ATTINY45V-10SU" x="79.79" y="35.137" smashed="yes" rot="R90">
@@ -3658,15 +3661,15 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="24.155" y="47.24" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="C16" library="rcl" package="C0805" value="100nF" x="36.07" y="11.625" smashed="yes" rot="R270">
-<attribute name="NAME" x="35.562" y="9.339" size="1.27" layer="25" rot="R270"/>
+<attribute name="NAME" x="35.5366" y="7.7802" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="33.53" y="12.895" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="C17" library="rcl" package="C0805" value="100nF" x="25.91" y="11.625" smashed="yes" rot="R270">
-<attribute name="NAME" x="25.402" y="9.339" size="1.27" layer="25" rot="R270"/>
+<attribute name="NAME" x="25.4528" y="8.7802" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="23.37" y="12.895" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="C18" library="rcl" package="C0805" value="10uF" x="23.37" y="11.625" smashed="yes" rot="R270">
-<attribute name="NAME" x="22.862" y="9.339" size="1.27" layer="25" rot="R270"/>
+<attribute name="NAME" x="22.735" y="9.2374" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="20.83" y="12.895" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="LSP1" library="solpad" package="LSP13" value="LSP13" x="7.42" y="26.695"/>
@@ -3675,7 +3678,10 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="96.1516" y="43.4762" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="R26" library="rcl" package="R0603" value="10K" x="16.004" y="9.034" rot="R180"/>
-<element name="R27" library="rcl" package="R0603" value="10K" x="16" y="16" rot="R180"/>
+<element name="R27" library="rcl" package="R0603" value="10K" x="16" y="16" smashed="yes" rot="R180">
+<attribute name="NAME" x="17.8034" y="18.5146" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="16.635" y="17.905" size="1.27" layer="27" rot="R180"/>
+</element>
 <element name="C49" library="resistor" package="C0603" value="10nF" x="46.5468" y="44.971" smashed="yes" rot="R180">
 <attribute name="NAME" x="46.2674" y="47.4094" size="1.27" layer="25" rot="R180"/>
 <attribute name="VALUE" x="47.4358" y="47.003" size="1.27" layer="27" rot="R180"/>

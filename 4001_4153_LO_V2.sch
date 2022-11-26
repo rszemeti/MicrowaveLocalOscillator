@@ -16381,7 +16381,7 @@ drill 1.3 mm</description>
 <part name="C49" library="resistor" deviceset="C-EU" device="C0603" value="10nF"/>
 <part name="R28" library="rcl" deviceset="R-EU_" device="R0603" value="150R"/>
 <part name="R29" library="rcl" deviceset="R-EU_" device="R0603" value="100K"/>
-<part name="VR1" library="resistor" deviceset="R-TRIMM" device="64Y"/>
+<part name="VR1" library="resistor" deviceset="R-TRIMM" device="64Y" value="1K0"/>
 </parts>
 <sheets>
 <sheet>
@@ -17812,6 +17812,12 @@ drill 1.3 mm</description>
 <approved hash="102,1,175.26,162.56,AGND,GND,,,,"/>
 <approved hash="102,1,147.32,154.94,AGND,GND,,,,"/>
 <approved hash="102,1,187.96,182.88,AGND,GND,,,,"/>
+<approved hash="205,1,138.063,345.44,SCK1G,GND,,,,"/>
+<approved hash="205,1,138.063,345.44,SCK1G,GND,,,,"/>
+<approved hash="205,1,138.063,345.44,SCK1G,GND,,,,"/>
+<approved hash="205,1,476.617,111.76,SCK2G,GND,,,,"/>
+<approved hash="205,1,476.617,111.76,SCK2G,GND,,,,"/>
+<approved hash="205,1,476.617,111.76,SCK2G,GND,,,,"/>
 <approved hash="115,1,119.38,252.535,SV1,,,,,"/>
 <approved hash="115,1,256.54,225.036,SJ1,,,,,"/>
 </errors>

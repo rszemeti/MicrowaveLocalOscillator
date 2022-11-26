@@ -1,0 +1,8 @@
+# For PCBs designed using Eagle
+
+
+# Backup history files
+*.b#[1-9]
+*.s#[1-9]
+
+

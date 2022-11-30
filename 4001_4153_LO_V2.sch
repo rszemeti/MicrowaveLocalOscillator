@@ -13209,6 +13209,18 @@ Source: &lt;a href="https://www.arrow.com/en/products/adf4153bruz-rl7/analog-dev
 <wire x1="-13.97" y1="-13.97" x2="-8.89" y2="-13.97" width="0.127" layer="27"/>
 <wire x1="-8.89" y1="-13.97" x2="-13.97" y2="-8.89" width="0.127" layer="27"/>
 </package>
+<package name="SOT23L">
+<smd name="D" x="0" y="1.1" dx="1" dy="1.4" layer="1"/>
+<smd name="G" x="-0.85" y="-1.1" dx="1" dy="1.4" layer="1"/>
+<smd name="S" x="0.85" y="-1.1" dx="1" dy="1.4" layer="1"/>
+<wire x1="-1.27" y1="0.635" x2="-1.905" y2="0.635" width="0.127" layer="21"/>
+<wire x1="-1.905" y1="0.635" x2="-1.905" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="-1.905" y1="-0.635" x2="-1.27" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="1.27" y1="0.635" x2="1.905" y2="0.635" width="0.127" layer="21"/>
+<wire x1="1.905" y1="0.635" x2="1.905" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="1.905" y1="-0.635" x2="1.27" y2="-0.635" width="0.127" layer="21"/>
+<text x="1.905" y="-0.635" size="1.27" layer="25">&gt;NAME</text>
+</package>
 </packages>
 <symbols>
 <symbol name="VCXO">
@@ -13241,6 +13253,25 @@ Source: &lt;a href="https://www.arrow.com/en/products/adf4153bruz-rl7/analog-dev
 <wire x1="-2.54" y1="5.08" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="-2.54" y1="-5.08" x2="7.62" y2="0" width="0.254" layer="94"/>
 <wire x1="7.62" y1="0" x2="-2.54" y2="5.08" width="0.254" layer="94"/>
+</symbol>
+<symbol name="TL431">
+<pin name="ANODE" x="0" y="-5.08" visible="off" length="short" rot="R90"/>
+<pin name="CATHODE" x="0" y="5.08" visible="off" length="short" rot="R270"/>
+<pin name="CTRL" x="-7.62" y="0" visible="off" length="short"/>
+<wire x1="-2.54" y1="2.54" x2="-2.54" y2="1.524" width="0.254" layer="94"/>
+<wire x1="-2.286" y1="2.54" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="1.778" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="-1.524" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="1.524" y2="0" width="0.254" layer="94"/>
+<wire x1="1.524" y1="0" x2="0" y2="2.286" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.286" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="-4.826" y1="0" x2="-1.778" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-1.778" y1="1.016" x2="-2.54" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="1.016" x2="-2.286" y2="0.508" width="0.254" layer="94"/>
+<wire x1="-2.286" y1="0.508" x2="-1.778" y2="1.016" width="0.254" layer="94"/>
+<text x="2.54" y="2.54" size="1.27" layer="95">&gt;NAME</text>
+<text x="2.54" y="0" size="1.27" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -13292,6 +13323,23 @@ Source: &lt;a href="https://www.arrow.com/en/products/adf4153bruz-rl7/analog-dev
 <connect gate="G$1" pin="GND" pad="GND"/>
 <connect gate="G$1" pin="OP" pad="OUT"/>
 <connect gate="G$1" pin="VCC" pad="VCC"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TL431AIDBZR">
+<gates>
+<gate name="G$1" symbol="TL431" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT23L">
+<connects>
+<connect gate="G$1" pin="ANODE" pad="D"/>
+<connect gate="G$1" pin="CATHODE" pad="G"/>
+<connect gate="G$1" pin="CTRL" pad="S"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16263,7 +16311,10 @@ drill 1.3 mm</description>
 <part name="C32" library="resistor" deviceset="C-EU" device="C0603" value="100nF"/>
 <part name="L6" library="resistor" deviceset="R-EU_" device="R0603" value="100nH"/>
 <part name="L11" library="resistor" deviceset="R-EU_" device="R0603" value="100nH"/>
-<part name="IC10" library="RF" deviceset="MCP6H01" device=""/>
+<part name="IC10" library="RF" deviceset="MCP6H01" device="" value="MCP6H01T-E/LT ">
+<attribute name="MPN" value="MCP6H01T-E/LT "/>
+<attribute name="OC_FARNELL" value="2920751"/>
+</part>
 <part name="R25" library="rcl" deviceset="R-EU_" device="R0603" value="10K"/>
 <part name="R24" library="rcl" deviceset="R-EU_" device="R0603" value="18K"/>
 <part name="R21" library="rcl" deviceset="R-EU_" device="R0603" value="27k"/>
@@ -16365,7 +16416,10 @@ drill 1.3 mm</description>
 <part name="C1" library="resistor" deviceset="C-EU" device="C0603" value="3.9pF"/>
 <part name="R5" library="rcl" deviceset="R-EU_" device="R0603" value="51R"/>
 <part name="OSC1" library="RF" deviceset="CTI_OSC" device=""/>
-<part name="SV1" library="con-harting-ml" deviceset="ML6" device=""/>
+<part name="SV1" library="con-harting-ml" deviceset="ML6" device="">
+<attribute name="MPN" value="MC-254-06-00-ST-DIP "/>
+<attribute name="OC_FARNELL" value="2843525"/>
+</part>
 <part name="SJ1" library="jumper" deviceset="SJ" device=""/>
 <part name="IC6" library="linear" deviceset="78*" device="DT" technology="05" value="7805DT"/>
 <part name="IC5" library="ATTINY45V-10SU" deviceset="ATTINY45V-10SU" device=""/>
@@ -16381,7 +16435,15 @@ drill 1.3 mm</description>
 <part name="C49" library="resistor" deviceset="C-EU" device="C0603" value="10nF"/>
 <part name="R28" library="rcl" deviceset="R-EU_" device="R0603" value="150R"/>
 <part name="R29" library="rcl" deviceset="R-EU_" device="R0603" value="100K"/>
-<part name="VR1" library="resistor" deviceset="R-TRIMM" device="64Y" value="1K0"/>
+<part name="VR1" library="resistor" deviceset="R-TRIMM" device="64Y" value="1K0">
+<attribute name="MPN" value="3296Y-1-103LF "/>
+<attribute name="OC_FARNELL" value="9353186"/>
+</part>
+<part name="IC11" library="RF" deviceset="TL431AIDBZR" device=""/>
+<part name="R30" library="rcl" deviceset="R-EU_" device="R0603" value="470R"/>
+<part name="R31" library="rcl" deviceset="R-EU_" device="R0603" value="10K"/>
+<part name="R32" library="rcl" deviceset="R-EU_" device="R0603" value="10K"/>
+<part name="C4" library="rcl" deviceset="C-EU" device="C0603" value="100nF"/>
 </parts>
 <sheets>
 <sheet>
@@ -16424,7 +16486,10 @@ drill 1.3 mm</description>
 <instance part="C32" gate="G$1" x="375.92" y="127"/>
 <instance part="L6" gate="G$1" x="393.7" y="132.08"/>
 <instance part="L11" gate="G$1" x="124.46" y="81.28"/>
-<instance part="IC10" gate="G$1" x="312.42" y="81.28"/>
+<instance part="IC10" gate="G$1" x="312.42" y="81.28">
+<attribute name="MPN" x="312.42" y="81.28" size="1.778" layer="96" display="off"/>
+<attribute name="OC_FARNELL" x="312.42" y="81.28" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="R25" gate="G$1" x="302.26" y="63.5" rot="R270"/>
 <instance part="R24" gate="G$1" x="322.58" y="68.58"/>
 <instance part="R21" gate="G$1" x="261.62" y="83.82"/>
@@ -16497,7 +16562,7 @@ drill 1.3 mm</description>
 <instance part="LED3" gate="G$1" x="292.1" y="264.16"/>
 <instance part="R7" gate="G$1" x="266.7" y="274.32" rot="R270"/>
 <instance part="LED1" gate="G$1" x="266.7" y="264.16"/>
-<instance part="TXFMR1" gate="G$1" x="147.32" y="345.44"/>
+<instance part="TXFMR1" gate="G$1" x="139.7" y="340.36" rot="MR180"/>
 <instance part="R3" gate="G$1" x="198.12" y="332.74"/>
 <instance part="C6" gate="G$1" x="205.74" y="327.66"/>
 <instance part="C7" gate="G$1" x="215.9" y="327.66"/>
@@ -16526,7 +16591,15 @@ drill 1.3 mm</description>
 <instance part="C49" gate="G$1" x="510.54" y="269.24"/>
 <instance part="R28" gate="G$1" x="495.3" y="276.86" rot="R90"/>
 <instance part="R29" gate="G$1" x="355.6" y="345.44"/>
-<instance part="VR1" gate="G$1" x="116.84" y="175.26"/>
+<instance part="VR1" gate="G$1" x="116.84" y="175.26">
+<attribute name="MPN" x="116.84" y="175.26" size="1.778" layer="96" display="off"/>
+<attribute name="OC_FARNELL" x="116.84" y="175.26" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="IC11" gate="G$1" x="91.44" y="180.34"/>
+<instance part="R30" gate="G$1" x="63.5" y="195.58"/>
+<instance part="R31" gate="G$1" x="73.66" y="167.64" rot="R90"/>
+<instance part="R32" gate="G$1" x="73.66" y="187.96" rot="R90"/>
+<instance part="C4" gate="G$1" x="96.52" y="177.8"/>
 </instances>
 <busses>
 </busses>
@@ -16631,6 +16704,18 @@ drill 1.3 mm</description>
 <wire x1="147.32" y1="157.48" x2="157.48" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="157.48" y1="157.48" x2="157.48" y2="160.02" width="0.1524" layer="91"/>
 <pinref part="VR1" gate="G$1" pin="E"/>
+<pinref part="IC11" gate="G$1" pin="ANODE"/>
+<wire x1="91.44" y1="175.26" x2="91.44" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="157.48" x2="96.52" y2="157.48" width="0.1524" layer="91"/>
+<pinref part="R31" gate="G$1" pin="1"/>
+<wire x1="96.52" y1="157.48" x2="116.84" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="162.56" x2="73.66" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="157.48" x2="91.44" y2="157.48" width="0.1524" layer="91"/>
+<junction x="91.44" y="157.48"/>
+<junction x="116.84" y="157.48"/>
+<pinref part="C4" gate="G$1" pin="2"/>
+<wire x1="96.52" y1="172.72" x2="96.52" y2="157.48" width="0.1524" layer="91"/>
+<junction x="96.52" y="157.48"/>
 </segment>
 <segment>
 <pinref part="C34" gate="G$1" pin="1"/>
@@ -16851,8 +16936,6 @@ drill 1.3 mm</description>
 <pinref part="C7" gate="G$1" pin="2"/>
 <wire x1="215.9" y1="322.58" x2="215.9" y2="317.5" width="0.1524" layer="91"/>
 <junction x="215.9" y="317.5"/>
-<pinref part="TXFMR1" gate="G$1" pin="SEC_1"/>
-<wire x1="177.8" y1="340.36" x2="182.88" y2="340.36" width="0.1524" layer="91"/>
 <wire x1="205.74" y1="317.5" x2="182.88" y2="317.5" width="0.1524" layer="91"/>
 <wire x1="182.88" y1="317.5" x2="182.88" y2="340.36" width="0.1524" layer="91"/>
 <junction x="205.74" y="317.5"/>
@@ -16871,12 +16954,14 @@ drill 1.3 mm</description>
 <junction x="307.34" y="317.5"/>
 <label x="317.5" y="317.5" size="1.778" layer="95" xref="yes"/>
 <wire x1="254" y1="317.5" x2="307.34" y2="317.5" width="0.1524" layer="91"/>
+<pinref part="TXFMR1" gate="G$1" pin="SEC_3"/>
+<wire x1="170.18" y1="340.36" x2="182.88" y2="340.36" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="TXFMR1" gate="G$1" pin="PRI_2"/>
-<wire x1="147.32" y1="340.36" x2="129.54" y2="340.36" width="0.1524" layer="91"/>
 <wire x1="129.54" y1="342.9" x2="129.54" y2="340.36" width="0.1524" layer="91"/>
 <pinref part="SCK1" gate="G1" pin="GND"/>
+<pinref part="TXFMR1" gate="G$1" pin="PRI_1"/>
+<wire x1="129.54" y1="340.36" x2="139.7" y2="340.36" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="SV1" gate="1" pin="6"/>
@@ -16905,6 +16990,11 @@ drill 1.3 mm</description>
 <pinref part="LSP1" gate="1" pin="MP"/>
 <wire x1="368.3" y1="208.28" x2="368.3" y2="205.74" width="0.1524" layer="91"/>
 <junction x="368.3" y="205.74"/>
+</segment>
+<segment>
+<pinref part="R30" gate="G$1" pin="1"/>
+<wire x1="58.42" y1="195.58" x2="48.26" y2="195.58" width="0.1524" layer="91"/>
+<label x="48.26" y="195.58" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="+9V" class="0">
@@ -17280,17 +17370,13 @@ drill 1.3 mm</description>
 <junction x="434.34" y="137.16"/>
 </segment>
 <segment>
-<wire x1="116.84" y1="193.04" x2="175.26" y2="193.04" width="0.1524" layer="91"/>
 <wire x1="175.26" y1="193.04" x2="175.26" y2="185.42" width="0.1524" layer="91"/>
-<label x="114.3" y="193.04" size="1.778" layer="95" rot="R180" xref="yes"/>
-<wire x1="116.84" y1="193.04" x2="114.3" y2="193.04" width="0.1524" layer="91"/>
-<wire x1="116.84" y1="180.34" x2="116.84" y2="193.04" width="0.1524" layer="91"/>
-<junction x="116.84" y="193.04"/>
 <pinref part="C23" gate="G$1" pin="1"/>
 <wire x1="187.96" y1="193.04" x2="175.26" y2="193.04" width="0.1524" layer="91"/>
-<junction x="175.26" y="193.04"/>
 <pinref part="OSC1" gate="G$1" pin="VCC"/>
-<pinref part="VR1" gate="G$1" pin="A"/>
+<wire x1="175.26" y1="193.04" x2="165.1" y2="193.04" width="0.1524" layer="91"/>
+<junction x="175.26" y="193.04"/>
+<label x="165.1" y="193.04" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="IC6" gate="A1" pin="VO"/>
@@ -17403,8 +17489,8 @@ drill 1.3 mm</description>
 <net name="4001_CP" class="0">
 <segment>
 <pinref part="R14" gate="G$1" pin="1"/>
-<wire x1="127" y1="167.64" x2="101.6" y2="167.64" width="0.1524" layer="91"/>
-<label x="101.6" y="167.64" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="127" y1="167.64" x2="124.46" y2="167.64" width="0.1524" layer="91"/>
+<label x="124.46" y="167.64" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="R11" gate="G$1" pin="2"/>
@@ -17640,13 +17726,6 @@ drill 1.3 mm</description>
 <wire x1="426.72" y1="332.74" x2="424.18" y2="332.74" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$34" class="0">
-<segment>
-<pinref part="TXFMR1" gate="G$1" pin="PRI_1"/>
-<wire x1="129.54" y1="345.44" x2="147.32" y2="345.44" width="0.1524" layer="91"/>
-<pinref part="SCK1" gate="G1" pin="1"/>
-</segment>
-</net>
 <net name="N$35" class="0">
 <segment>
 <pinref part="C6" gate="G$1" pin="1"/>
@@ -17680,14 +17759,13 @@ drill 1.3 mm</description>
 </net>
 <net name="N$33" class="0">
 <segment>
-<pinref part="TXFMR1" gate="G$1" pin="SEC_3"/>
 <pinref part="L1" gate="G$1" pin="2"/>
-<wire x1="177.8" y1="345.44" x2="190.5" y2="345.44" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="190.5" y1="345.44" x2="205.74" y2="345.44" width="0.1524" layer="91"/>
 <wire x1="193.04" y1="332.74" x2="190.5" y2="332.74" width="0.1524" layer="91"/>
 <wire x1="190.5" y1="332.74" x2="190.5" y2="345.44" width="0.1524" layer="91"/>
-<junction x="190.5" y="345.44"/>
+<pinref part="TXFMR1" gate="G$1" pin="SEC_1"/>
+<wire x1="170.18" y1="345.44" x2="190.5" y2="345.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$36" class="0">
@@ -17802,6 +17880,47 @@ drill 1.3 mm</description>
 <pinref part="L7" gate="G$1" pin="1"/>
 <wire x1="457.2" y1="121.92" x2="457.2" y2="124.46" width="0.1524" layer="91"/>
 <pinref part="R17" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="+5V_PRECISION" class="0">
+<segment>
+<wire x1="116.84" y1="195.58" x2="119.38" y2="195.58" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="180.34" x2="116.84" y2="195.58" width="0.1524" layer="91"/>
+<pinref part="VR1" gate="G$1" pin="A"/>
+<label x="119.38" y="195.58" size="1.778" layer="95"/>
+<pinref part="IC11" gate="G$1" pin="CATHODE"/>
+<wire x1="91.44" y1="185.42" x2="91.44" y2="195.58" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="195.58" x2="96.52" y2="195.58" width="0.1524" layer="91"/>
+<pinref part="R30" gate="G$1" pin="2"/>
+<wire x1="96.52" y1="195.58" x2="116.84" y2="195.58" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="195.58" x2="73.66" y2="195.58" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="195.58" x2="91.44" y2="195.58" width="0.1524" layer="91"/>
+<pinref part="R32" gate="G$1" pin="2"/>
+<wire x1="73.66" y1="193.04" x2="73.66" y2="195.58" width="0.1524" layer="91"/>
+<junction x="73.66" y="195.58"/>
+<junction x="91.44" y="195.58"/>
+<junction x="116.84" y="195.58"/>
+<pinref part="C4" gate="G$1" pin="1"/>
+<wire x1="96.52" y1="180.34" x2="96.52" y2="195.58" width="0.1524" layer="91"/>
+<junction x="96.52" y="195.58"/>
+</segment>
+</net>
+<net name="N$42" class="0">
+<segment>
+<pinref part="R32" gate="G$1" pin="1"/>
+<wire x1="73.66" y1="182.88" x2="73.66" y2="180.34" width="0.1524" layer="91"/>
+<pinref part="IC11" gate="G$1" pin="CTRL"/>
+<wire x1="73.66" y1="180.34" x2="83.82" y2="180.34" width="0.1524" layer="91"/>
+<pinref part="R31" gate="G$1" pin="2"/>
+<wire x1="73.66" y1="172.72" x2="73.66" y2="180.34" width="0.1524" layer="91"/>
+<junction x="73.66" y="180.34"/>
+</segment>
+</net>
+<net name="N$34" class="0">
+<segment>
+<pinref part="SCK1" gate="G1" pin="1"/>
+<pinref part="TXFMR1" gate="G$1" pin="PRI_2"/>
+<wire x1="129.54" y1="345.44" x2="139.7" y2="345.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

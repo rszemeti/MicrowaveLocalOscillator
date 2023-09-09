@@ -9,12 +9,12 @@
 
 uint32_t Reg4001[5] =  {0x5A0038, 0x8008051, 0x1A004E42, 0x4B3, 0x9A003C} ; // 10Mhz oscillator, ref 10MHz, Muxout: digital lock detect
 uint32_t Reg4153[6] =  {
-  0x000003, /* clear spurs mode */
-  0x3C7,    /* write desired spurs mode */
-  0x001BC6, /* Enable counter reset */
-  0x144191, /* Write R1 */
-  0x1E80C8, /* Write R2 2450 MHz */
-  0x1BC2    /* Disable counter reset  1BC2 =5mA */
+  0x000003, /* clear spurs mode R3*/
+  0x3C7,    /* write desired spurs mode R3*/
+  0x1386,   /* Enable counter reset R2*/
+  0x44015,  /* Write R1 */
+  0x3FC00C, /* Write R0 */
+  0x1382    /* Disable counter reset  1BC2 =5mA R2*/
  } ; 
 
 void setup() {

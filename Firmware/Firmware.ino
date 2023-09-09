@@ -13,7 +13,7 @@ uint32_t Reg4153[6] =  {
   0x3C7,    /* write desired spurs mode R3*/
   0x1386,   /* Enable counter reset R2*/
   0x44015,  /* Write R1 */
-  0x3FC00C, /* Write R0 */
+  0x3E0008, /* Write R0 */
   0x1382    /* Disable counter reset  1BC2 =5mA R2*/
  } ; 
 

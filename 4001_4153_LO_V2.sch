@@ -16447,6 +16447,7 @@ drill 1.3 mm</description>
 <part name="L12" library="resistor" deviceset="R-EU_" device="R0603" value="100nH"/>
 <part name="R22" library="rcl" deviceset="R-EU_" device="R0603" value="560R"/>
 <part name="C51" library="resistor" deviceset="C-EU" device="C0603" value="100nF"/>
+<part name="C52" library="resistor" deviceset="C-EU" device="C0603" value="DNF"/>
 </parts>
 <sheets>
 <sheet>
@@ -16605,6 +16606,7 @@ drill 1.3 mm</description>
 <instance part="L12" gate="G$1" x="304.8" y="109.22" rot="R90"/>
 <instance part="R22" gate="G$1" x="337.82" y="81.28" rot="R180"/>
 <instance part="C51" gate="G$1" x="345.44" y="68.58" rot="R180"/>
+<instance part="C52" gate="G$1" x="292.1" y="106.68" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -17294,6 +17296,10 @@ drill 1.3 mm</description>
 <wire x1="289.56" y1="99.06" x2="287.02" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="287.02" y1="99.06" x2="287.02" y2="83.82" width="0.1524" layer="91"/>
 <junction x="287.02" y="83.82"/>
+<pinref part="C52" gate="G$1" pin="1"/>
+<wire x1="289.56" y1="106.68" x2="287.02" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="287.02" y1="106.68" x2="287.02" y2="99.06" width="0.1524" layer="91"/>
+<junction x="287.02" y="99.06"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -17918,7 +17924,12 @@ drill 1.3 mm</description>
 <segment>
 <pinref part="R21" gate="G$1" pin="1"/>
 <pinref part="C43" gate="G$1" pin="1"/>
-<wire x1="299.72" y1="99.06" x2="320.04" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="299.72" y1="99.06" x2="302.26" y2="99.06" width="0.1524" layer="91"/>
+<pinref part="C52" gate="G$1" pin="2"/>
+<wire x1="302.26" y1="99.06" x2="320.04" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="297.18" y1="106.68" x2="302.26" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="302.26" y1="106.68" x2="302.26" y2="99.06" width="0.1524" layer="91"/>
+<junction x="302.26" y="99.06"/>
 </segment>
 </net>
 <net name="N$39" class="0">
@@ -17937,6 +17948,7 @@ drill 1.3 mm</description>
 <wire x1="330.2" y1="81.28" x2="327.66" y2="81.28" width="0.1524" layer="91"/>
 <pinref part="R22" gate="G$1" pin="2"/>
 <wire x1="332.74" y1="81.28" x2="330.2" y2="81.28" width="0.1524" layer="91"/>
+<junction x="330.2" y="81.28"/>
 </segment>
 </net>
 <net name="N$40" class="0">

@@ -7,14 +7,19 @@
 #define ADF4153 DDB3      // 4153        
 
 
-uint32_t Reg4001[5] =  {0x5A0038, 0x8008051, 0x1A004E42, 0x4B3, 0x9A003C} ; // 10Mhz oscillator, ref 10MHz, Muxout: digital lock detect
+uint32_t Reg4001[5] =  {
+  0xD8092, 
+  0x4, 
+  0x200101,
+} ; // 10Mhz oscillator, ref 10MHz, Muxout: digital lock detect
+
 uint32_t Reg4153[6] =  {
   0x000003, /* clear spurs mode R3*/
-  0x3C7,    /* write desired spurs mode R3*/
-  0x1386,   /* Enable counter reset R2*/
+  0x383,    /* write desired spurs mode R3*/
+  0x1386,   /* Enable counter reset R2 =R2+4 */
   0x44015,  /* Write R1 */
   0x3E0008, /* Write R0 */
-  0x1382    /* Disable counter reset  1BC2 =5mA R2*/
+  0x1382    /* Disable counter reset  R2*/
  } ; 
 
 void setup() {
@@ -27,10 +32,12 @@ void setup() {
   digitalWrite(ADF4153, LOW);
 
   delay(500);
-  ADFSet(Reg4001, 5, ADF4001);
+  ADFSet(Reg4001, 3, ADF4001);
   delay(500);
   ADFSet(Reg4153, 6, ADF4153);
   delay(500);
+
+
 }
 
 
